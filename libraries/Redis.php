@@ -7,7 +7,7 @@
  * @package        	CodeIgniter
  * @category    	Libraries
  * @author        	Joël Cox
- * @version			v0.4
+ * @version			v0.4.1
  * @link 			https://github.com/joelcox/codeigniter-redis
  * @link			http://joelcox.nl
  * @license			http://www.opensource.org/licenses/mit-license.html
@@ -400,7 +400,7 @@ class Redist {
 		// Loop all values and add them to the response array
 		for ($i = 0; $i < $total_values; $i++)
 		{ 
-			//  is array
+			//  is array for command scan
 			
 			if(fgets($this->_connection,2) == '*'){
 			   $total_values = (int) fgets($this->_connection)+$i;
